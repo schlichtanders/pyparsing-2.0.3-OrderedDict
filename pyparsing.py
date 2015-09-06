@@ -1859,7 +1859,7 @@ class Regex(Token):
         keypattern = r'\?P<([^>]*)>' #extracts keys from named groups
         keys = re.findall(keypattern, self.re.pattern)
         items = result.groupdict().items()
-        items_sorted = mysorted(items, key=lambda (k,v): keys.index(k))
+        items_sorted = sorted(items, key=lambda (k,v): keys.index(k))
         d = collections.OrderedDict(items_sorted)
         # before: d = result.groupdict()
         ret = ParseResults(result.group())
