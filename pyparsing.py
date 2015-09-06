@@ -691,7 +691,7 @@ class ParseResults(object):
          inAccumNames,
          self.__name) = state[1]
         #ORDEREDDICT
-        self.__accumNames = collections.OrderedDict # {}
+        self.__accumNames = collections.OrderedDict() # {}
         self.__accumNames.update(inAccumNames)
         if par is not None:
             self.__parent = wkref(par)
@@ -1060,7 +1060,7 @@ class ParserElement(object):
 
     # argument cache for optimizing repeated calls when backtracking through recursive expressions
     # ORDEREDDICT
-    _exprArgCache = collections.OrderedDict # {}
+    _exprArgCache = collections.OrderedDict() # {}
     def resetCache():
         ParserElement._exprArgCache.clear()
     resetCache = staticmethod(resetCache)
@@ -2589,7 +2589,7 @@ class Each(ParseExpression):
         finalResults = ParseResults([])
         for r in resultlist:
             #ORDEREDDICT
-            dups = collections.OrderedDict #{}
+            dups = collections.OrderedDict() #{}
             for k in r.keys():
                 if k in finalResults:
                     tmp = ParseResults(finalResults[k])
