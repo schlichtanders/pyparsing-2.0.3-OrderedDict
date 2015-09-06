@@ -285,14 +285,15 @@ class ParseResults(object):
             self.__doinit = False
             self.__name = None
             self.__parent = None
-            self.__accumNames = {}
+            #ORDEREDDICT
+            self.__accumNames = collections.OrderedDict() #{}
             if isinstance(toklist, list):
                 self.__toklist = toklist[:]
             elif isinstance(toklist, _generatorType):
                 self.__toklist = list(toklist)
             else:
                 self.__toklist = [toklist]
-            self.__tokdict = dict()
+            self.__tokdict = collections.OrderedDict()  # ORDEREDDICT
 
         if name is not None and name:
             if not modal:
@@ -539,9 +540,11 @@ class ParseResults(object):
     def asDict( self ):
         """Returns the named parse results as dictionary."""
         if PY_3:
-            return dict( self.items() )
+            #ORDEREDDICT
+            return collections.OrderedDict( self.items() )
         else:
-            return dict( self.iteritems() )
+            #ORDEREDDICT
+            return collections.OrderedDict( self.iteritems() )
 
     def copy( self ):
         """Returns a new copy of a C{ParseResults} object."""
@@ -556,7 +559,8 @@ class ParseResults(object):
         """Returns the parse results as XML. Tags are created for tokens and lists that have defined results names."""
         nl = "\n"
         out = []
-        namedItems = dict((v[1],k) for (k,vlist) in self.__tokdict.items()
+        #ORDEREDDICT
+        namedItems = collections.OrderedDict((v[1],k) for (k,vlist) in self.__tokdict.items()
                                                             for v in vlist)
         nextLevelIndent = indent + "  "
 
@@ -686,7 +690,8 @@ class ParseResults(object):
          par,
          inAccumNames,
          self.__name) = state[1]
-        self.__accumNames = {}
+        #ORDEREDDICT
+        self.__accumNames = collections.OrderedDict # {}
         self.__accumNames.update(inAccumNames)
         if par is not None:
             self.__parent = wkref(par)
@@ -1054,7 +1059,8 @@ class ParserElement(object):
     _parse = _parseNoCache
 
     # argument cache for optimizing repeated calls when backtracking through recursive expressions
-    _exprArgCache = {}
+    # ORDEREDDICT
+    _exprArgCache = collections.OrderedDict # {}
     def resetCache():
         ParserElement._exprArgCache.clear()
     resetCache = staticmethod(resetCache)
@@ -1849,7 +1855,13 @@ class Regex(Token):
             raise ParseException(instring, loc, self.errmsg, self)
 
         loc = result.end()
-        d = result.groupdict()
+        # ORDEREDDICT work around groupdict() unorderdness
+        keypattern = r'\?P<([^>]*)>' #extracts keys from named groups
+        keys = re.findall(keypattern, self.re.pattern)
+        items = result.groupdict().items()
+        items_sorted = mysorted(items, key=lambda (k,v): keys.index(k))
+        d = collections.OrderedDict(items_sorted)
+        # before: d = result.groupdict()
         ret = ParseResults(result.group())
         if d:
             for k in d:
@@ -2576,7 +2588,8 @@ class Each(ParseExpression):
 
         finalResults = ParseResults([])
         for r in resultlist:
-            dups = {}
+            #ORDEREDDICT
+            dups = collections.OrderedDict #{}
             for k in r.keys():
                 if k in finalResults:
                     tmp = ParseResults(finalResults[k])
@@ -3701,7 +3714,8 @@ punc8bit = srange(r"[\0xa1-\0xbf\0xd7\0xf7]")
 
 anyOpenTag,anyCloseTag = makeHTMLTags(Word(alphas,alphanums+"_:"))
 commonHTMLEntity = Combine(_L("&") + oneOf("gt lt amp nbsp quot").setResultsName("entity") +";").streamline()
-_htmlEntityMap = dict(zip("gt lt amp nbsp quot".split(),'><& "'))
+#ORDEREDDICT
+_htmlEntityMap = collections.OrderedDict(zip("gt lt amp nbsp quot".split(),'><& "'))
 replaceHTMLEntity = lambda t : t.entity in _htmlEntityMap and _htmlEntityMap[t.entity] or None
 
 # it's easy to get these comment structures wrong - they're very common, so may as well make them available
