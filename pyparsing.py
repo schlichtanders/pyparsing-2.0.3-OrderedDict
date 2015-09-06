@@ -57,9 +57,9 @@ The pyparsing module handles some of the problems that are typically vexing when
  - embedded comments
 """
 
-__version__ = "2.0.3"
-__versionTime__ = "16 Aug 2014 00:12"
-__author__ = "Paul McGuire <ptmcg@users.sourceforge.net>"
+__version__ = "2.0.3.1"
+__versionTime__ = "6 Sep 2015 13:00"
+__author__ = "Paul McGuire <ptmcg@users.sourceforge.net>, Stephan Sahm <stephan.sahm@gmx.de"
 
 import string
 from weakref import ref as wkref
