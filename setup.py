@@ -16,7 +16,7 @@ setup(# Distribution meta-data
     description = "Python parsing module. Version using collections.OrderedDict",
     author = "Stephan Sahm",
     author_email = "Stephan.Sahm@gmx.de",
-    url="https://github.com/schlichtanders/pyparsing-2.0.3-OrderedDict"
+    url="https://github.com/schlichtanders/pyparsing-2.0.3-OrderedDict",
     license = "MIT License",
     py_modules = modules,
     classifiers=[
