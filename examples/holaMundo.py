@@ -3,7 +3,7 @@
 # escrito por Marco Alfonso, 2004 Noviembre
 
 # importamos el modulo 
-from pyparsing import * 
+from pyparsingOD import *
 saludo= Word(alphas) + ',' + Word(alphas) + '!' 
  
 # Aqui decimos que la gramatica "saludo" DEBE contener 
@@ -18,13 +18,13 @@ tokens = saludo.parseString("Hola, Mundo !")
 for i in range(len(tokens)):
     print ("Token %d -> %s" % (i,tokens[i]))
 
-#imprimimos cada uno de los tokens Y listooo!!, he aquí la salida 
-# Token 0—> Hola Token 1—> , Token 2—> Mundo Token 3—> ! 
+#imprimimos cada uno de los tokens Y listooo!!, he aquï¿½ la salida 
+# Token 0ï¿½> Hola Token 1ï¿½> , Token 2ï¿½> Mundo Token 3ï¿½> ! 
  
-# Por supuesto, se pueden “reutilizar” gramáticas, por ejemplo: 
+# Por supuesto, se pueden ï¿½reutilizarï¿½ gramï¿½ticas, por ejemplo: 
 numimag = Word(nums) + 'i' 
 numreal = Word(nums) 
 numcomplex = numreal + '+' + numimag 
 print (numcomplex.parseString("3+5i"))
 
-# Excelente!!, bueno, los dejo, me voy a seguir tirando código…
+# Excelente!!, bueno, los dejo, me voy a seguir tirando cï¿½digoï¿½

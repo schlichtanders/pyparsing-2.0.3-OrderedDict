@@ -1,4 +1,4 @@
-from pyparsing import *
+from pyparsingOD import *
 
 typemap = {
     "byte" : "c_byte",

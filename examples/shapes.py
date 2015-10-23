@@ -30,7 +30,7 @@ class Circle(Shape):
         return 3.14159 * self.radius**2
 
 
-from pyparsing import *
+from pyparsingOD import *
 
 number = Regex(r'-?\d+(\.\d*)?').setParseAction(lambda t:float(t[0]))
 

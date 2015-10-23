@@ -1,5 +1,5 @@
 print('Importing pyparsing...')
-from pyparsing import *
+from pyparsingOD import *
 
 print('Constructing EBNF parser with pyparsing...')
 import ebnf

@@ -10,7 +10,7 @@ import urllib.parse
 
 DEBUG = False
 
-from pyparsing import Word, Group, ZeroOrMore, alphas, \
+from pyparsingOD import Word, Group, ZeroOrMore, alphas, \
     alphanums, ParserElement, ParseException, ParseSyntaxException, \
     Empty, LineEnd, OneOrMore, col, Keyword, pythonStyleComment, \
     StringEnd, traceParseAction

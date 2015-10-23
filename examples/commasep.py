@@ -6,7 +6,7 @@
 # - list elements can be quoted strings, which can safely contain commas without breaking
 #    into separate elements
 
-from pyparsing import commaSeparatedList
+from pyparsingOD import commaSeparatedList
 
 testData = [
     "a,b,c,100.2,,3",

@@ -5,7 +5,7 @@
 #  Copyright 2010, Paul McGuire
 #
 
-from pyparsing import (Word, alphas, alphanums, Regex, Suppress, Forward,
+from pyparsingOD import (Word, alphas, alphanums, Regex, Suppress, Forward,
     Group, oneOf, ZeroOrMore, Optional, delimitedList, Keyword,
     restOfLine, quotedString)
 

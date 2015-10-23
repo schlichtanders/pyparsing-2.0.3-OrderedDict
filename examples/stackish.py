@@ -28,7 +28,7 @@ SPACE White space is basically ignored. This is interesting because since
     separation character and perform reasonable diffs on two structures. 
 """
 
-from pyparsing import Suppress,Word,nums,alphas,alphanums,Combine,oneOf,\
+from pyparsingOD import Suppress,Word,nums,alphas,alphanums,Combine,oneOf,\
         Optional,QuotedString,Forward,Group,ZeroOrMore,printables,srange
 
 MARK,UNMARK,AT,COLON,QUOTE = map(Suppress,"[]@:'")

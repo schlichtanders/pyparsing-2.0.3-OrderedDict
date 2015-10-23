@@ -7,7 +7,7 @@ Created on 4 sept. 2010
 
 (Minor updates by Paul McGuire, June, 2012)
 '''
-from pyparsing import Word, ZeroOrMore, printables, Suppress, OneOrMore, Group, \
+from pyparsingOD import Word, ZeroOrMore, printables, Suppress, OneOrMore, Group, \
     LineEnd, Optional, White, originalTextFor, hexnums, nums, Combine, Literal, Keyword, \
     cStyleComment, Regex, Forward, MatchFirst, And, srange, oneOf, alphas, alphanums, \
     delimitedList

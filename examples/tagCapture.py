@@ -4,7 +4,7 @@
 # Simple demo showing how to match HTML tags
 #
 
-from pyparsing import *
+from pyparsingOD import *
 
 src = "this is test <b> bold <i>text</i> </b> normal text "
 

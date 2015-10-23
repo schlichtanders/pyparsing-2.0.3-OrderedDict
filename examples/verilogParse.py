@@ -68,11 +68,11 @@ import sys
 
 __version__ = "1.0.11"
 
-from pyparsing import Literal, CaselessLiteral, Keyword, Word, Upcase, OneOrMore, ZeroOrMore, \
+from pyparsingOD import Literal, CaselessLiteral, Keyword, Word, Upcase, OneOrMore, ZeroOrMore, \
         Forward, NotAny, delimitedList, Group, Optional, Combine, alphas, nums, restOfLine, cStyleComment, \
         alphanums, printables, dblQuotedString, empty, ParseException, ParseResults, MatchFirst, oneOf, GoToColumn, \
         ParseResults,StringEnd, FollowedBy, ParserElement, And, Regex, cppStyleComment#,__version__
-import pyparsing
+import pyparsingOD
 usePackrat = False
 usePsyco = False
 
@@ -635,7 +635,7 @@ if 0:
 else:
     def main():
         print("Verilog parser test (V %s)" % __version__)
-        print(" - using pyparsing version", pyparsing.__version__)
+        print(" - using pyparsing version", pyparsingOD.__version__)
         print(" - using Python version", sys.version)
         if packratOn: print(" - using packrat parsing")
         if psycoOn: print(" - using psyco runtime optimization")

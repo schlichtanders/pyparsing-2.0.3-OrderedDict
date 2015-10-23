@@ -1,6 +1,6 @@
 # URL extractor
 # Copyright 2004, Paul McGuire
-from pyparsing import Literal,Suppress,CharsNotIn,CaselessLiteral,\
+from pyparsingOD import Literal,Suppress,CharsNotIn,CaselessLiteral,\
         Word,dblQuotedString,alphanums,SkipTo
 import urllib.request, urllib.parse, urllib.error
 import pprint

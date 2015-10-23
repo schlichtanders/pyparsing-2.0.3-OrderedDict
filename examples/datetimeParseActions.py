@@ -6,7 +6,7 @@
 # Copyright 2012, Paul T. McGuire
 #
 from datetime import datetime
-from pyparsing import *
+from pyparsingOD import *
 
 # define an integer string, and a parse action to convert it
 # to an integer at parse time

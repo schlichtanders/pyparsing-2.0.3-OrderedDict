@@ -31,7 +31,7 @@ value
     null
 """
 
-from pyparsing import *
+from pyparsingOD import *
 
 TRUE = Keyword("true").setParseAction( replaceWith(True) )
 FALSE = Keyword("false").setParseAction( replaceWith(False) )

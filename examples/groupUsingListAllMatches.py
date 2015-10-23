@@ -5,7 +5,7 @@
 # This example performs work similar to itertools.groupby, but without
 # having to sort the input first.
 #
-from pyparsing import Word, ZeroOrMore, nums
+from pyparsingOD import Word, ZeroOrMore, nums
 
 aExpr = Word("A", nums)
 bExpr = Word("B", nums)

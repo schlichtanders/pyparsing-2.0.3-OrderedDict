@@ -2,6 +2,14 @@
 PyParsing -- A Python Parsing Module
 ====================================
 
+Fork Remark
+===========
+
+This fork of pyparsing changed the internal use of dictionaries dict to
+collections.OrderedDict in order to preserve the order in which they were
+past from the string.
+
+
 Introduction
 ============
 

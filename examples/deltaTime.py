@@ -10,7 +10,7 @@
 #
 
 from datetime import datetime, timedelta
-from pyparsing import *
+from pyparsingOD import *
 import calendar
 
 __all__ = ["nlTimeExpression"]

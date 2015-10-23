@@ -7,7 +7,7 @@
 # Copyright 2006, by Paul McGuire
 #
 
-from pyparsing import *
+from pyparsingOD import *
 
 integer = Word(nums).setParseAction(lambda t:int(t[0]))
 variable = Word(alphas,exact=1)

@@ -9,7 +9,7 @@
 #
 # Copyright 2003-2009 by Paul McGuire
 #
-from pyparsing import Literal,CaselessLiteral,Word,Group,Optional,\
+from pyparsingOD import Literal,CaselessLiteral,Word,Group,Optional,\
     ZeroOrMore,Forward,nums,alphas,Regex,ParseException
 import math
 import operator

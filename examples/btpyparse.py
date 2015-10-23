@@ -9,7 +9,7 @@ Matthew Brett 2010
 Simplified BSD license
 """
 
-from pyparsing import (Regex, Suppress, ZeroOrMore, Group, Optional, Forward,
+from pyparsingOD import (Regex, Suppress, ZeroOrMore, Group, Optional, Forward,
                        SkipTo, CaselessLiteral, Dict)
 
 

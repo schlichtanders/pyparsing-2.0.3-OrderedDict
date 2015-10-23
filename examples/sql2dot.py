@@ -47,7 +47,7 @@ alter table only student_registrations
     (class_id) references classes(class_id);
 """.upper()
     
-from pyparsing import Literal, CaselessLiteral, Word, delimitedList \
+from pyparsingOD import Literal, CaselessLiteral, Word, delimitedList \
     ,Optional, Combine, Group, alphas, nums, alphanums, Forward \
     , oneOf, sglQuotedString, OneOrMore, ZeroOrMore, CharsNotIn \
     , replaceWith

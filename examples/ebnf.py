@@ -6,7 +6,7 @@
 # http://www.cl.cam.ac.uk/~mgk25/iso-ebnf.html
 
 
-from pyparsing import *
+from pyparsingOD import *
 
 
 all_names = '''

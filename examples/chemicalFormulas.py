@@ -3,8 +3,8 @@
 # Copyright (c) 2003, Paul McGuire
 #
 
-from pyparsing import Word, Optional, OneOrMore, Group, ParseException, Regex
-from pyparsing import alphas
+from pyparsingOD import Word, Optional, OneOrMore, Group, ParseException, Regex
+from pyparsingOD import alphas
 
 atomicWeight = {
     "O"  : 15.9994,

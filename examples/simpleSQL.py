@@ -5,7 +5,7 @@
 #
 # Copyright (c) 2003, Paul McGuire
 #
-from pyparsing import Literal, CaselessLiteral, Word, Upcase, delimitedList, Optional, \
+from pyparsingOD import Literal, CaselessLiteral, Word, Upcase, delimitedList, Optional, \
     Combine, Group, alphas, nums, alphanums, ParseException, Forward, oneOf, quotedString, \
     ZeroOrMore, restOfLine, Keyword
 

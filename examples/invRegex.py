@@ -13,7 +13,7 @@
 #
 __all__ = ["count","invert"]
 
-from pyparsing import (Literal, oneOf, printables, ParserElement, Combine, 
+from pyparsingOD import (Literal, oneOf, printables, ParserElement, Combine,
     SkipTo, operatorPrecedence, ParseFatalException, Word, nums, opAssoc,
     Suppress, ParseResults, srange)
 

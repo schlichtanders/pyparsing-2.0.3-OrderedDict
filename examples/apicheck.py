@@ -3,7 +3,7 @@
 #       [ procname1 $arg1 $arg2 ]
 #  and verifying the number of arguments
 
-from pyparsing import *
+from pyparsingOD import *
 
 # define punctuation and simple tokens for locating API calls
 LBRACK,RBRACK,LBRACE,RBRACE = map(Suppress,"[]{}")

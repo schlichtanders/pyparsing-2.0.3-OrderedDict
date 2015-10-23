@@ -6,7 +6,7 @@
 #
 # Copyright (c) 2006, Paul McGuire
 #
-from pyparsing import *
+from pyparsingOD import *
 import urllib.request, urllib.parse, urllib.error
 
 removeText = replaceWith("")

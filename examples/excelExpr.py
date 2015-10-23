@@ -4,7 +4,7 @@
 # 
 # A partial implementation of a parser of Excel formula expressions.
 #
-from pyparsing import (CaselessKeyword, Suppress, Word, alphas, 
+from pyparsingOD import (CaselessKeyword, Suppress, Word, alphas,
     alphanums, nums, Optional, Group, oneOf, Forward, Regex, 
     operatorPrecedence, opAssoc, dblQuotedString, delimitedList, 
     Combine, Literal, QuotedString)

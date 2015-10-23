@@ -4,7 +4,7 @@
 #
 # Demonstration of the parsing module, on the prototypical "Hello, World!" example
 #
-from pyparsing import Word 
+from pyparsingOD import Word
 
 # define grammar
 alphas = ''.join(chr(x) for x in range(0x386, 0x3ce)) 

@@ -11,7 +11,7 @@
 #
 # Copyright 2006, by Paul McGuire
 #
-from pyparsing import *
+from pyparsingOD import *
 
 # define an expression for the body of a line of text - use a parse action to reject any
 # empty lines

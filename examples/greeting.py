@@ -5,7 +5,7 @@
 #
 # Copyright 2003, by Paul McGuire
 #
-from pyparsing import Word, alphas
+from pyparsingOD import Word, alphas
 
 # define grammar
 greet = Word( alphas ) + "," + Word( alphas ) + "!"

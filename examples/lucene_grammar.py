@@ -7,7 +7,7 @@
 # at http://svn.apache.org/viewvc/lucene/dev/trunk/lucene/docs/queryparsersyntax.html
 #
 
-from pyparsing import (Literal, CaselessKeyword, Forward, Regex, QuotedString, Suppress,
+from pyparsingOD import (Literal, CaselessKeyword, Forward, Regex, QuotedString, Suppress,
     Optional, Group, FollowedBy, operatorPrecedence, opAssoc, ParseException, ParserElement)
 ParserElement.enablePackrat()
 

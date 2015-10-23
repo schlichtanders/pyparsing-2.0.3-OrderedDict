@@ -7,7 +7,7 @@
 #
 # Copyright (c) 2006, Paul McGuire
 #
-from pyparsing import *
+from pyparsingOD import *
 
 data = """Now is the time
 for all good men

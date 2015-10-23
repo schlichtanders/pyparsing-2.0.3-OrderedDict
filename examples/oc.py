@@ -70,7 +70,7 @@ The following is a description of the OC grammar:
 	stars:		"*"*
 """
 
-from pyparsing import *
+from pyparsingOD import *
 
 LPAR,RPAR,LBRACK,RBRACK,LBRACE,RBRACE,SEMI,COMMA = map(Suppress, "()[]{};,")
 INT = Keyword("int")

@@ -6,7 +6,7 @@
 # Copyright 2011, Paul T. McGuire
 #
 
-from pyparsing import Word, nums, Suppress, ParseException, empty, Optional
+from pyparsingOD import Word, nums, Suppress, ParseException, empty, Optional
 from datetime import datetime
 
 def rangeCheck(minval=None, maxval=None):

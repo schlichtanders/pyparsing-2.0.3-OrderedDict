@@ -6,7 +6,7 @@
 #  paired delimiters for grouping lists and sublists
 #
 
-from pyparsing import *
+from pyparsingOD import *
 import pprint
 
 data = """

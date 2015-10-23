@@ -6,7 +6,7 @@
 # grouping (like Python does).
 #
 
-from pyparsing import *
+from pyparsingOD import *
 
 data = """\
 def A(z):

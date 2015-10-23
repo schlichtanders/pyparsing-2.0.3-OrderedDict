@@ -1,4 +1,4 @@
-from pyparsing import *
+from pyparsingOD import *
 
 # first pass
 lbrack = Literal("[")

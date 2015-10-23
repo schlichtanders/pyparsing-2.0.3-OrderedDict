@@ -3,7 +3,7 @@
 # Copyright, 2006, by Paul McGuire
 #
 from __future__ import print_function
-from pyparsing import *
+from pyparsingOD import *
 
 
 cvtBool = lambda t:t[0]=='True'

@@ -4,7 +4,7 @@
 # a simple SELECT statement parser, taken from SQLite's SELECT statement
 # definition at http://www.sqlite.org/lang_select.html
 #
-from pyparsing import *
+from pyparsingOD import *
 ParserElement.enablePackrat()
 
 LPAR,RPAR,COMMA = map(Suppress,"(),")

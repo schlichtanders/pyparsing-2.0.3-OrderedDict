@@ -3,7 +3,7 @@
 # Copyright (c) 2006, Paul McGuire
 #
 
-from pyparsing import *
+from pyparsingOD import *
 
 def romanNumeralLiteral(numeralString, value):
     return Literal(numeralString).setParseAction(replaceWith(value))
